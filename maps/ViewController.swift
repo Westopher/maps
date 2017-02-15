@@ -27,9 +27,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: longDelta)
         
-        let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         
-        let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
+        let region = MKCoordinateRegion(center: coordinates, span: span)
         
         map.setRegion(region, animated: true)        
         
